@@ -610,7 +610,7 @@ class LLMAgent_Persona(LLMAgent):
         elif ask_or_correct == "confirm_done":
             rollout_data_copy = deepcopy(rollout_data)
             rollout_data_copy["rollout"] = rollout_steps
-            results_dict = process_trace(rollout_data_copy)
+            results_dict, _ = process_trace(rollout_data_copy)
             return results_dict
 
         
